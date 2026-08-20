@@ -1,52 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Kitebi SSS school information system">
-  <title>Kitebi SSS | School Information System</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kitebi SSS School Information System"><title>Kitebi SSS | School Information System</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="brand"><div class="brand-mark">K</div><div><strong>Kitebi SSS</strong><span>Information System</span></div></div>
-    <nav>
-      <button class="nav-item active" data-section="dashboard">⌂ <span>Dashboard</span></button>
-      <button class="nav-item" data-section="registration">＋ <span>Registration</span></button>
-      <button class="nav-item" data-section="search">⌕ <span>Search Records</span></button>
-      <button class="nav-item" data-section="entry">▣ <span>Data Entry</span></button>
-      <button class="nav-item" data-section="students">♙ <span>Students</span></button>
-      <button class="nav-item" data-section="staff">♙ <span>Staff</span></button>
-      <button class="nav-item" data-section="academics">▤ <span>Academics</span></button>
-      <button class="nav-item" data-section="attendance">✓ <span>Attendance</span></button>
-      <button class="nav-item" data-section="fees">▱ <span>Fees</span></button>
-    </nav>
-    <div class="sidebar-footer">v1.0 • Demo interface</div>
-  </aside>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">K</div><div><strong>Kitebi SSS</strong><span>School Information System</span></div></div>
+  <nav>
+    <button class="nav-item active" data-section="dashboard">⌂ <span>Dashboard</span></button>
+    <button class="nav-item" data-section="registration">＋ <span>Register Student</span></button>
+    <button class="nav-item" data-section="search">⌕ <span>Search Records</span></button>
+    <button class="nav-item" data-section="students">♙ <span>Students</span></button>
+    <button class="nav-item" data-section="staff">♟ <span>Staff</span></button>
+    <button class="nav-item" data-section="academics">▤ <span>Academics</span></button>
+    <button class="nav-item" data-section="attendance">✓ <span>Attendance</span></button>
+    <button class="nav-item" data-section="fees">▱ <span>Fees</span></button>
+    <button class="nav-item" data-section="settings">⚙ <span>Settings</span></button>
+  </nav>
+  <div class="sidebar-footer">Kitebi SSS • v2.0</div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="menu" id="menu">☰</button><div class="crumb" id="crumb">Dashboard</div><div class="user"><span>Administrator</span><span class="avatar">A</span></div></header>
 
-  <main class="main">
-    <header class="topbar"><button class="menu" id="menu">☰</button><div class="crumb" id="crumb">Dashboard</div><div class="user">Administrator <span class="avatar">A</span></div></header>
+<section id="dashboard" class="section active-section">
+  <div class="hero"><div><p class="eyebrow">KITEBI SSS</p><h1>School Information System</h1><p>Enter, manage and retrieve school information from one secure workspace.</p></div><button class="primary" data-go="registration">＋ Register student</button></div>
+  <div class="stats">
+    <div class="stat"><div class="stat-icon">♙</div><span>Students</span><strong id="studentCount">0</strong><small>Registered records</small></div>
+    <div class="stat"><div class="stat-icon">♟</div><span>Staff</span><strong>86</strong><small>Active staff</small></div>
+    <div class="stat"><div class="stat-icon">✓</div><span>Attendance</span><strong>94%</strong><small>Current average</small></div>
+    <div class="stat"><div class="stat-icon">▱</div><span>Fees</span><strong>—</strong><small>Connect database</small></div>
+  </div>
+  <div class="section-heading"><div><h2>Quick actions</h2><p>Frequently used tasks</p></div></div>
+  <div class="quick-grid"><button class="quick-card" data-go="registration"><span>＋</span><b>Register student</b><small>Create a new student record</small></button><button class="quick-card" data-go="search"><span>⌕</span><b>Search records</b><small>Find existing school records</small></button><button class="quick-card" data-go="academics"><span>▤</span><b>Academic records</b><small>Manage results and subjects</small></button><button class="quick-card" data-go="attendance"><span>✓</span><b>Attendance</b><small>Record daily attendance</small></button></div>
+  <div class="grid-2"><div class="panel"><div class="panel-head"><div><h2>Recent students</h2><p>Latest registered records</p></div><button class="link-btn" data-go="students">View all</button></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Class</th><th>Status</th></tr></thead><tbody id="recentTable"></tbody></table></div></div><div class="panel"><div class="panel-head"><div><h2>System modules</h2><p>Available areas</p></div></div><ul class="module-list"><li><span>Student management</span><b class="ready">Ready</b></li><li><span>Search & retrieval</span><b class="ready">Ready</b></li><li><span>Staff management</span><b class="ready">Interface</b></li><li><span>Academic records</span><b class="ready">Interface</b></li><li><span>Attendance & fees</span><b class="ready">Interface</b></li></ul></div></div>
+</section>
 
-    <section id="dashboard" class="section active-section">
-      <div class="hero"><div><p class="eyebrow">WELCOME BACK</p><h1>Kitebi SSS Dashboard</h1><p>Manage school information, enter records and retrieve data from one place.</p></div><button class="primary" data-go="registration">＋ Register student</button></div>
-      <div class="stats"><div class="stat"><span>Students</span><strong id="studentCount">0</strong><small>Registered records</small></div><div class="stat"><span>Staff</span><strong>86</strong><small>Active staff</small></div><div class="stat"><span>Attendance</span><strong>94%</strong><small>Current average</small></div><div class="stat"><span>Fees</span><strong>—</strong><small>Demo data</small></div></div>
-      <div class="grid-2"><div class="panel"><div class="panel-head"><div><h2>Quick actions</h2><p>Common tasks</p></div></div><div class="actions"><button data-go="registration">Register student</button><button data-go="search">Search records</button><button data-go="entry">Enter data</button><button data-go="students">View students</button></div></div><div class="panel"><div class="panel-head"><div><h2>System overview</h2><p>Modules available in this version</p></div></div><ul class="module-list"><li><span>Student management</span><b>Ready</b></li><li><span>Search & retrieval</span><b>Ready</b></li><li><span>Data entry</span><b>Ready</b></li><li><span>Academic records</span><b>Planned</b></li><li><span>Attendance & fees</span><b>Planned</b></li></ul></div></div>
-    </section>
+<section id="registration" class="section"><div class="page-title"><div><p class="eyebrow">STUDENT MANAGEMENT</p><h1>Register Student</h1><p>Create a complete student record.</p></div><button class="secondary" data-go="students">View students</button></div><form class="panel form-grid" id="registrationForm"><label>Full name *<input name="name" required placeholder="e.g. John Doe"></label><label>Student ID *<input name="id" required placeholder="KSSS-0001"></label><label>Gender<select name="gender"><option>Female</option><option>Male</option><option>Other</option></select></label><label>Date of birth<input name="dob" type="date"></label><label>Class<select name="class"><option>S.1</option><option>S.2</option><option>S.3</option><option>S.4</option><option>S.5</option><option>S.6</option></select></label><label>Stream<input name="stream" placeholder="e.g. East"></label><label>Admission year<input name="year" type="number" min="2000" max="2100" value="2026"></label><label>Parent/Guardian<input name="guardian" placeholder="Full name"></label><label>Phone number<input name="phone" placeholder="07XXXXXXXX"></label><label>Address<input name="address" placeholder="Kampala"></label><label>Previous school<input name="previousSchool" placeholder="Previous school"></label><label>Medical notes<input name="medical" placeholder="Optional"></label><div class="form-actions"><button type="reset" class="secondary">Clear form</button><button type="submit" class="primary">Save student</button></div></form></section>
 
-    <section id="registration" class="section"><div class="page-title"><div><p class="eyebrow">STUDENT MANAGEMENT</p><h1>Student Registration</h1><p>Create a new student record.</p></div></div><form class="panel form-grid" id="registrationForm"><label>Full name<input name="name" required placeholder="e.g. John Doe"></label><label>Student ID<input name="id" required placeholder="KSSS-0001"></label><label>Gender<select name="gender"><option>Female</option><option>Male</option><option>Other</option></select></label><label>Date of birth<input name="dob" type="date"></label><label>Class<input name="class" placeholder="e.g. S.3"></label><label>Stream<input name="stream" placeholder="e.g. East"></label><label>Admission year<input name="year" type="number" min="2000" max="2100" value="2026"></label><label>Parent/Guardian<input name="guardian" placeholder="Full name"></label><label>Phone number<input name="phone" placeholder="07XXXXXXXX"></label><label>Address<input name="address" placeholder="Kampala"></label><div class="form-actions"><button type="reset" class="secondary">Clear</button><button type="submit" class="primary">Save student</button></div></form></section>
+<section id="search" class="section"><div class="page-title"><div><p class="eyebrow">DATA RETRIEVAL</p><h1>Search Records</h1><p>Search by student name, ID, class, stream or guardian.</p></div></div><div class="panel"><div class="searchbar"><span>⌕</span><input id="searchInput" placeholder="Search records..."><button class="primary" id="searchBtn">Search</button></div><div class="result-meta" id="resultMeta"></div><div class="table-wrap"><table><thead><tr><th>Student ID</th><th>Name</th><th>Class</th><th>Stream</th><th>Guardian</th><th>Status</th></tr></thead><tbody id="results"></tbody></table></div></div></section>
 
-    <section id="search" class="section"><div class="page-title"><div><p class="eyebrow">DATA RETRIEVAL</p><h1>Search Records</h1><p>Find student records quickly.</p></div></div><div class="panel"><div class="searchbar"><input id="searchInput" placeholder="Search by name, student ID or class..."><button class="primary" id="searchBtn">Search</button></div><div class="table-wrap"><table><thead><tr><th>Student ID</th><th>Name</th><th>Class</th><th>Stream</th><th>Guardian</th><th>Status</th></tr></thead><tbody id="results"></tbody></table></div></div></section>
+<section id="students" class="section"><div class="page-title"><div><p class="eyebrow">STUDENT MANAGEMENT</p><h1>Students</h1><p>All registered student records.</p></div><button class="primary" data-go="registration">＋ Add student</button></div><div class="panel"><div class="toolbar"><div class="mini-search"><span>⌕</span><input id="studentFilter" placeholder="Filter students..."></div><span class="record-count" id="studentMeta"></span></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Gender</th><th>Class</th><th>Stream</th><th>Year</th></tr></thead><tbody id="studentTable"></tbody></table></div></div></section>
 
-    <section id="entry" class="section"><div class="page-title"><div><p class="eyebrow">RECORD MANAGEMENT</p><h1>Data Entry</h1><p>Enter additional school information.</p></div></div><div class="cards"><button class="module-card"><span>▤</span><h3>Academic results</h3><p>Enter marks and examination records.</p></button><button class="module-card"><span>✓</span><h3>Attendance</h3><p>Record daily student attendance.</p></button><button class="module-card"><span>▱</span><h3>Fees</h3><p>Capture payments and balances.</p></button></div><div class="notice">These modules are prepared for the next development phase. The current release focuses on student registration and retrieval.</div></section>
-
-    <section id="students" class="section"><div class="page-title"><div><p class="eyebrow">STUDENT MANAGEMENT</p><h1>Students</h1><p>All registered demo records.</p></div><button class="primary" data-go="registration">＋ Add student</button></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Gender</th><th>Class</th><th>Stream</th><th>Year</th></tr></thead><tbody id="studentTable"></tbody></table></div></div></section>
-
-    <section id="staff" class="section placeholder"><div class="empty"><span>♙</span><h1>Staff Management</h1><p>Staff registration and retrieval will be added in the next phase.</p></div></section>
-    <section id="academics" class="section placeholder"><div class="empty"><span>▤</span><h1>Academic Records</h1><p>Results and subject records will be added in the next phase.</p></div></section>
-    <section id="attendance" class="section placeholder"><div class="empty"><span>✓</span><h1>Attendance</h1><p>Attendance capture and reporting will be added in the next phase.</p></div></section>
-    <section id="fees" class="section placeholder"><div class="empty"><span>▱</span><h1>Fees</h1><p>Fees and payment records will be added in the next phase.</p></div></section>
-  </main>
-  <div class="toast" id="toast"></div>
-  <script src="app.js"></script>
-</body>
-</html>
+<section id="staff" class="section"><div class="page-title"><div><p class="eyebrow">PEOPLE</p><h1>Staff Management</h1><p>Staff records and administration.</p></div></div><div class="feature-grid"><div class="feature"><span>♟</span><h3>Staff profiles</h3><p>Store names, departments, subjects and contact information.</p><button class="secondary" data-toast="Staff database will be connected in the next backend phase.">Open module</button></div><div class="feature"><span>⌕</span><h3>Staff search</h3><p>Retrieve staff records quickly by name or department.</p><button class="secondary" data-toast="Staff search is ready for database integration.">Search staff</button></div></div></section>
+<section id="academics" class="section"><div class="page-title"><div><p class="eyebrow">ACADEMICS</p><h1>Academic Records</h1><p>Results, subjects and examination information.</p></div></div><div class="feature-grid"><div class="feature"><span>▤</span><h3>Examination results</h3><p>Capture marks, grades, terms and academic years.</p><button class="secondary" data-toast="Academic records module is ready for database integration.">Enter results</button></div><div class="feature"><span>▦</span><h3>Subjects</h3><p>Manage subjects and class allocations.</p><button class="secondary" data-toast="Subject management is ready for the next phase.">Manage subjects</button></div></div></section>
+<section id="attendance" class="section"><div class="page-title"><div><p class="eyebrow">ATTENDANCE</p><h1>Attendance</h1><p>Daily attendance capture and reporting.</p></div></div><div class="feature-grid"><div class="feature"><span>✓</span><h3>Daily register</h3><p>Record present, absent and late students.</p><button class="secondary" data-toast="Attendance capture is ready for database integration.">Open register</button></div><div class="feature"><span>▥</span><h3>Reports</h3><p>Review attendance history and class summaries.</p><button class="secondary" data-toast="Attendance reports will use live data after database integration.">View reports</button></div></div></section>
+<section id="fees" class="section"><div class="page-title"><div><p class="eyebrow">FINANCE</p><h1>Fees Management</h1><p>Payments, balances and financial records.</p></div></div><div class="feature-grid"><div class="feature"><span>▱</span><h3>Payments</h3><p>Capture student fee payments and receipts.</p><button class="secondary" data-toast="Fees module is ready for secure database integration.">Enter payment</button></div><div class="feature"><span>▣</span><h3>Balances</h3><p>Review outstanding balances and payment history.</p><button class="secondary" data-toast="Balances will appear after database integration.">View balances</button></div></div></section>
+<section id="settings" class="section"><div class="page-title"><div><p class="eyebrow">SYSTEM</p><h1>Settings</h1><p>System configuration and administration.</p></div></div><div class="panel settings-list"><div><b>School</b><span>Kitebi SSS</span></div><div><b>System</b><span>School Information System</span></div><div><b>Version</b><span>2.0</span></div><div><b>Data storage</b><span>Browser demo storage — backend required for shared records</span></div></div></section>
+</main><div class="toast" id="toast"></div><script src="app.js"></script>
+</body></html>
